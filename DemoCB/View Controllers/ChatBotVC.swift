@@ -8,27 +8,57 @@
 
 import UIKit
 
-class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate {
+class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate , UITextFieldDelegate {
 
 
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var sendButton : UIButton!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var inputBarBottomLayout: NSLayoutConstraint!
     
     var items = [Message]()
     let barHeight: CGFloat = 50
+    var helper = Helper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.initialSetUp()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
     
     //MARK:- IBActions
     @IBAction func didTapSendBtn(_ sender : UIButton) {
-        
+        if let text = self.inputTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            LexHelper.sendToLex(text)
+            self.addLoaderMessage()
+            self.helper.getDataForHomePage(textMessage: text)
+        }
     }
 
+    fileprivate func initialSetUp() {
+        self.setupTableView()
+        self.setupInputBar()
+        self.addWelcomeMessage()
+        self.handleBOTResponse()
+        self.helper.chatDelegate = self
+        self.navigationItem.title = "ChatBot"
+    }
 
+    fileprivate func addWelcomeMessage() {
+        items.append(Message.getHelloMessageFromBOT())
+    }
+    
     //MARK:- TableView Delegates and DataSources
     func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
@@ -39,14 +69,11 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
     }
     
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        let message = self.items[indexPath.section]
-        
-//        if message.cardType == .generalSender {
-//            return 44
-//        }
-//        
         return UITableView.automaticDimension
     }
     
@@ -72,7 +99,63 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
         else if let cell = cell as? TypingLoaderCell {
             cell.gifImageView.loadGif(name: "typing_loader")
         }
+        
+        return cell
     }
     
+    //MARK:- UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.inputTextField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        let trimmedtext = self.inputTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if trimmedtext!.isEmpty {
+            let lightGrayImg = self.sendButton.imageView!.image!.color(color: UIColor.lightGray)
+            self.sendButton.setImage(lightGrayImg, for: .normal)
+            self.sendButton.isEnabled = false
+        }else {
+            let newGrayImg = self.sendButton.imageView!.image!.color(color: UIColor.blue)
+            self.sendButton.setImage(newGrayImg, for: .normal)
+            self.sendButton.isEnabled = true
+        }
+    }
+    
+    //MARK:- Keyboard NotificationCenter handlers
+    @objc func keyboardWillShow(notification: Notification) {
+        if let frame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let height = frame.cgRectValue.height
+            let userInfo = (notification as NSNotification).userInfo!
+            let keyboardHeight =  (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//            self.tableView.contentInset.bottom = height
+            self.tableView.scrollIndicatorInsets.bottom = height
+            self.inputBarBottomLayout.constant =  keyboardHeight.height - self.view.safeAreaInsets.bottom
+            
+//            if self.view.frame.origin.y == 0 {
+//
+//                self.view.frame.origin.y -= keyboardHeight.height - self.view.safeAreaInsets.bottom
+//            }
+            if self.items.count > 0 {
+                let lastSectionIndex = self.tableView.numberOfSections - 1
+                let lastRowIndex = self.tableView.numberOfRows(inSection: lastSectionIndex) - 1
+                let pathToLastRow = IndexPath(row: lastRowIndex, section: lastSectionIndex)
+                self.tableView.scrollToRow(at: pathToLastRow, at: .bottom, animated: true)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+//        let userInfo = (notification as NSNotification).userInfo!
+//        let keyboardHeight =  (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//        if self.view.frame.origin.y != 0{
+//            self.view.frame.origin.y += keyboardHeight.height - self.view.safeAreaInsets.bottom
+//            self.view.frame.origin.y = 0
+//        }
+//        self.tableView.contentInset.bottom = 0
+        self.tableView.scrollIndicatorInsets.bottom = 0
+        self.inputBarBottomLayout.constant = 0
+    }
 }
 

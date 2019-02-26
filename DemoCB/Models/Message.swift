@@ -35,12 +35,12 @@ class Message: NSObject {
     }
     
     //MARK: Init
-    init(text: String, owner: MessageOwner, timestamp: Int, cardType : CardType = .general) {
+    init(text: String, owner: MessageOwner, timestamp: Int, cardType : CardType = .generalBOT) {
         self.text = text
         self.subTitle = ""
         self.owner = owner
         self.timestamp = timestamp
-        self.cardType = .general
+        self.cardType = .generalBOT
     }
     
     class func getMessages(botResponse: BotResponse) -> Array<Message> {
@@ -54,10 +54,21 @@ class Message: NSObject {
     
     class func getBasicInfoMessage(botResponse: BotResponse) -> Message {
         
-        let message = Message(text: "I am BOT.", owner: .bot, timestamp: Int(Date().timeIntervalSince1970), cardType: .general)
+        let message = Message(text: "I am BOT.", owner: .bot, timestamp: Int(Date().timeIntervalSince1970), cardType: .generalBOT)
+        message.text = botResponse.outputText!
         
-        message.text = "No reply from bot"
-        
+        return message
+    }
+    
+    class func getHelloMessageFromBOT() -> Message {
+        let message = Message(text: "Hi there, What would you like me to do today?", owner: .bot, timestamp: Int(Date().timeIntervalSince1970), cardType: .generalBOT)
+        message.cardType = .generalBOT
+        return message
+    }
+    
+    class func getTypingLoaderMessage() -> Message {
+        let message = Message(text: "Bot is typing..", owner: .bot, timestamp: Int(Date().timeIntervalSince1970), cardType: .typingLoader)
+        message.cardType = .typingLoader
         return message
     }
 

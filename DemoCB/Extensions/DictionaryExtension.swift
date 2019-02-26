@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+extension Dictionary {
+    func stringForKey(_ key: Key) -> String {
+        if let string = self[key] as? String {
+            return string
+        }
+        return ""
+    }
+}

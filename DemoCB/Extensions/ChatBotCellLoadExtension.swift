@@ -43,4 +43,16 @@ extension ChatBotVC {
     func registerCells() {
         tableView.register(UINib(nibName: "TypingLoaderCell", bundle: nil), forCellReuseIdentifier: ChatBotCellId.typingLoaderCell)
     }
+    
+    func setupInputBar() {
+        
+        inputTextField.setLeftPaddingPoints()
+        self.sendButton.isEnabled = false
+        let lightGrayImg = self.sendButton.imageView!.image!.color(color: UIColor.lightGray)
+        self.sendButton.setImage(lightGrayImg, for: .normal)
+        inputTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
 }
+
+

@@ -33,3 +33,15 @@ class APPFont {
         return UIFont(name: "AvenirNext-Medium", size: size)!
     }
 }
+
+class Constants: NSObject {
+    
+    class var netError: OurErrorProtocol {
+        
+        return CustomError(title: "Connection Error!", description: "Internet connection appears to be offline. Please check your internet connection.", code: 9999)
+    }
+    
+    class func showInternetErrorAlert() {
+        AlertController.alert(title: "Connection Error!", message: "Internet connection appears to be offline. Please check your internet connection.")
+    }
+}
