@@ -45,6 +45,10 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
             self.helper.getDataForHomePage(textMessage: text)
         }
     }
+    
+    @IBAction func didTapMenuClicked(_ sender: Any) {
+        sideMenuController?.revealMenu()
+    }
 
     fileprivate func initialSetUp() {
         self.setupTableView()
