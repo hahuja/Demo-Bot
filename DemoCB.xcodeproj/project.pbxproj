@@ -48,6 +48,9 @@
 		3AE1830F2226759E002CC28E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1830E2226759E002CC28E /* MenuViewController.swift */; };
 		3AE183112226AD1F002CC28E /* ThirdChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE183102226AD1F002CC28E /* ThirdChatVC.swift */; };
 		3AE183132227C42F002CC28E /* FourthChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE183122227C42F002CC28E /* FourthChatVC.swift */; };
+		3AE1831622290B07002CC28E /* DemoCB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1831422290B07002CC28E /* DemoCB.xcdatamodeld */; };
+		3AE1831822291224002CC28E /* CoreDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1831722291224002CC28E /* CoreDataInput.swift */; };
+		3AE1834B222CFB7E002CC28E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1834A222CFB7E002CC28E /* StringExtension.swift */; };
 		C3F568E1C8D47514BD4C89EE /* Pods_DemoCBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC722B6C15110CD0C1C879 /* Pods_DemoCBTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +109,9 @@
 		3AE1830E2226759E002CC28E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3AE183102226AD1F002CC28E /* ThirdChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdChatVC.swift; sourceTree = "<group>"; };
 		3AE183122227C42F002CC28E /* FourthChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthChatVC.swift; sourceTree = "<group>"; };
+		3AE1831522290B07002CC28E /* DemoCB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoCB.xcdatamodel; sourceTree = "<group>"; };
+		3AE1831722291224002CC28E /* CoreDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataInput.swift; sourceTree = "<group>"; };
+		3AE1834A222CFB7E002CC28E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8A7D8A471C17A220CB4376CA /* Pods-DemoCBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCBTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoCBTests/Pods-DemoCBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACEA020FD78422F61C7149B8 /* Pods-DemoCBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCBTests.release.xcconfig"; path = "Target Support Files/Pods-DemoCBTests/Pods-DemoCBTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD6124479EC87F02E9E967A1 /* Pods-DemoCB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCB.release.xcconfig"; path = "Target Support Files/Pods-DemoCB/Pods-DemoCB.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 		3ABFF3B9221BFFFA000108B5 /* DemoCB */ = {
 			isa = PBXGroup;
 			children = (
+				3AE1831422290B07002CC28E /* DemoCB.xcdatamodeld */,
 				3ABFF3BA221BFFFA000108B5 /* AppDelegate.swift */,
 				3AE1830B221D5C50002CC28E /* Network Module */,
 				3AE182F4221D2675002CC28E /* Utils */,
@@ -206,6 +213,7 @@
 				3AE182EA221D23DE002CC28E /* DictionaryExtension.swift */,
 				3AE182F9221D2A27002CC28E /* UITableViewExtension.swift */,
 				3AE182FB221D3044002CC28E /* UIViewExtension.swift */,
+				3AE1834A222CFB7E002CC28E /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 				3AE182EC221D247C002CC28E /* CustomError.swift */,
 				3AE182EE221D24C8002CC28E /* AlertController.swift */,
 				3AE182F5221D26A9002CC28E /* Reachability.swift */,
+				3AE1831722291224002CC28E /* CoreDataInput.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -464,6 +473,7 @@
 				3AE182E3221C2DFF002CC28E /* LexHelper.swift in Sources */,
 				3ABFF3E5221C0779000108B5 /* BotResponse.swift in Sources */,
 				3AE18308221D3920002CC28E /* Parser.swift in Sources */,
+				3AE1834B222CFB7E002CC28E /* StringExtension.swift in Sources */,
 				3ABFF3EA221C0FD4000108B5 /* TypingLoaderCell.swift in Sources */,
 				3AE182FA221D2A27002CC28E /* UITableViewExtension.swift in Sources */,
 				3ABFF3BF221BFFFA000108B5 /* SecondChatVC.swift in Sources */,
@@ -474,6 +484,7 @@
 				3AE1830D2223FD27002CC28E /* ViewController.swift in Sources */,
 				3ABFF3E7221C08D1000108B5 /* ChatBotCellLoadExtension.swift in Sources */,
 				3ABFF3DD221C04EB000108B5 /* BOTMessageCell.swift in Sources */,
+				3AE1831822291224002CC28E /* CoreDataInput.swift in Sources */,
 				3AE182ED221D247C002CC28E /* CustomError.swift in Sources */,
 				3AE182E9221D2306002CC28E /* Bot.swift in Sources */,
 				3ABFF3BB221BFFFA000108B5 /* AppDelegate.swift in Sources */,
@@ -491,6 +502,7 @@
 				3ABFF3BD221BFFFA000108B5 /* ChatBotVC.swift in Sources */,
 				3AE182EF221D24C8002CC28E /* AlertController.swift in Sources */,
 				3AE182F6221D26AA002CC28E /* Reachability.swift in Sources */,
+				3AE1831622290B07002CC28E /* DemoCB.xcdatamodeld in Sources */,
 				3AE182DA221C15C5002CC28E /* ImageExtension.swift in Sources */,
 				3AE182E5221C2ECE002CC28E /* AppDelegateExtension.swift in Sources */,
 				3ABFF3E3221C06C9000108B5 /* MessageConstants.swift in Sources */,
@@ -765,6 +777,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3AE1831422290B07002CC28E /* DemoCB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3AE1831522290B07002CC28E /* DemoCB.xcdatamodel */,
+			);
+			currentVersion = 3AE1831522290B07002CC28E /* DemoCB.xcdatamodel */;
+			path = DemoCB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3ABFF3AF221BFFF9000108B5 /* Project object */;
 }

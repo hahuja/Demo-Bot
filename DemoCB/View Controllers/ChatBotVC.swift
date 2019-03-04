@@ -30,6 +30,7 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
+        CoreDataInput.retreiveSavedMessages()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,7 +47,7 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
         }
     }
     
-    @IBAction func didTapMenuClicked(_ sender: Any) {
+    @IBAction func didTapMenuButtonDidClicked(_ sender: Any) {
         sideMenuController?.revealMenu()
     }
 
@@ -57,10 +58,12 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
         self.handleBOTResponse()
         self.helper.chatDelegate = self
         self.navigationItem.title = "ChatBot"
+        self.addFetchBtn()
     }
 
     fileprivate func addWelcomeMessage() {
         items.append(Message.getHelloMessageFromBOT())
+        
     }
     
     //MARK:- TableView Delegates and DataSources
@@ -160,6 +163,21 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
 //        self.tableView.contentInset.bottom = 0
         self.tableView.scrollIndicatorInsets.bottom = 0
         self.inputBarBottomLayout.constant = 0
+    }
+    
+    func addFetchBtn() {
+        let btn1 = UIButton(type: .custom)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn1.titleLabel?.text = "Fetch"
+        btn1.addTarget(self, action: #selector(self.didTapFetchMessagesBtn), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: btn1)
+        self.navigationItem.rightBarButtonItem?.title = "Fetch"
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = item1
+    }
+    
+    @objc func didTapFetchMessagesBtn() {
+        CoreDataInput.retreiveSavedMessages()
     }
 }
 

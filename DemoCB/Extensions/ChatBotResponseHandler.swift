@@ -125,6 +125,8 @@ extension ChatBotVC : ChatDelegate {
         
         items.append(contentsOf: messages)
         
+        
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -134,6 +136,8 @@ extension ChatBotVC : ChatDelegate {
     
     func addMessage(_ message: Message) {
         addMessages([message])
+        let cardTypeStr = String(describing: message.cardType)
+        CoreDataInput.saveMessage(text: message.text, timeStamp: Int(Date().timeIntervalSince1970), cardType: cardTypeStr)
     }
     
     func removeMessage(_ message: Message) {

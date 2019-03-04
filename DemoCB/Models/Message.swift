@@ -48,6 +48,9 @@ class Message: NSObject {
         var messages = [Message]()
         let message = Message.getBasicInfoMessage(botResponse: botResponse)
         messages.append(message)
+        let cardTypeStr = String(describing: message.cardType)
+        CoreDataInput.saveMessage(text: message.text, timeStamp: Int(Date().timeIntervalSince1970), cardType: cardTypeStr)
+        
         
         return messages
     }
@@ -63,6 +66,8 @@ class Message: NSObject {
     class func getHelloMessageFromBOT() -> Message {
         let message = Message(text: "Hi there, What would you like me to do today?", owner: .bot, timestamp: Int(Date().timeIntervalSince1970), cardType: .generalBOT)
         message.cardType = .generalBOT
+        let cardTypeStr = String(describing: message.cardType)
+        CoreDataInput.saveMessage(text: message.text, timeStamp: Int(Date().timeIntervalSince1970), cardType: cardTypeStr)
         return message
     }
     
