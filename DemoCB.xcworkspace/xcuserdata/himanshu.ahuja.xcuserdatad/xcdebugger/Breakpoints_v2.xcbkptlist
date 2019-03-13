@@ -84,7 +84,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.269969"
+            timestampString = "574083099.013921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -100,45 +100,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.270072"
+            timestampString = "574083099.014779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "retreiveSavedMessages()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static DemoCB.CoreDataInput.retreiveSavedMessages() -&gt; ()"
-                  moduleName = "DemoCB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshu.ahuja/Desktop/DemoCB/DemoCB/Utils/CoreDataInput.swift"
-                  timestampString = "573376353.953986"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "392">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; __C.NSManagedObjectContext in static DemoCB.CoreDataInput.retreiveSavedMessages() -&gt; ()"
-                  moduleName = "DemoCB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshu.ahuja/Desktop/DemoCB/DemoCB/Utils/CoreDataInput.swift"
-                  timestampString = "573376353.956519"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "26">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -148,7 +116,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.270927"
+            timestampString = "574083099.014829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -164,7 +132,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.271149"
+            timestampString = "574083099.014869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -180,13 +148,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.27135"
+            timestampString = "574083099.014906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "saveMessage(text:timeStamp:cardType:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static DemoCB.CoreDataInput.saveMessage(text: Swift.String, timeStamp: Swift.Int, cardType: Swift.String) -&gt; ()"
+                  moduleName = "DemoCB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/himanshu.ahuja/Desktop/DemoCB/DemoCB/Utils/CoreDataInput.swift"
+                  timestampString = "574076462.09068"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "2731">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in static DemoCB.CoreDataInput.saveMessage(text: Swift.String, timeStamp: Swift.Int, cardType: Swift.String) -&gt; ()"
+                  moduleName = "DemoCB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/himanshu.ahuja/Desktop/DemoCB/DemoCB/Utils/CoreDataInput.swift"
+                  timestampString = "574076462.092381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -196,7 +196,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.271533"
+            timestampString = "574083099.014942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -212,7 +212,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.271709"
+            timestampString = "574083099.014977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -228,7 +228,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.271879"
+            timestampString = "574083099.015022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -272,7 +272,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Extensions/ChatBotResponseHandler.swift"
@@ -288,7 +288,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Extensions/ChatBotResponseHandler.swift"
@@ -304,7 +304,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Extensions/ChatBotResponseHandler.swift"
@@ -324,13 +324,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoCB/Utils/CoreDataInput.swift"
-            timestampString = "573390535.273541"
+            timestampString = "574083099.015125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "retreiveSavedMessages()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -47,7 +47,7 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
         }
     }
     
-    @IBAction func didTapMenuButtonDidClicked(_ sender: Any) {
+    @IBAction func didTapMenuClicked(_ sender: Any) {
         sideMenuController?.revealMenu()
     }
 
@@ -168,10 +168,10 @@ class ChatBotVC : UIViewController , UITableViewDataSource , UITableViewDelegate
     func addFetchBtn() {
         let btn1 = UIButton(type: .custom)
         btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn1.titleLabel?.text = "Fetch"
+        btn1.setTitle("Fetch", for: .normal)
+        btn1.setTitleColor(UIColor.black, for: .normal)
         btn1.addTarget(self, action: #selector(self.didTapFetchMessagesBtn), for: .touchUpInside)
         let item1 = UIBarButtonItem(customView: btn1)
-        self.navigationItem.rightBarButtonItem?.title = "Fetch"
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = item1
     }

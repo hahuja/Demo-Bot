@@ -21,7 +21,8 @@ class CoreDataInput {
             return moc
         }()
         let insertMessageEntity = NSEntityDescription.entity(forEntityName: "MessageModel", in: privateManagedObjectContext)
-//        let insertMessageData = NSEntityDescription.insertNewObject(forEntityName: "Message", into: privateManagedObjectContext)
+//        let insertMessageEntity1 = NSEntityDescription.entity(forEntityName: "MessagesModel", in: privateManagedObjectContext) as! Message
+        
         
         let messageObject = NSManagedObject(entity: insertMessageEntity!, insertInto: privateManagedObjectContext)
         if cardType == "typingLoader" {

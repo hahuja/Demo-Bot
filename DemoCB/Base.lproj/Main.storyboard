@@ -275,7 +275,7 @@
                         <barButtonItem key="leftBarButtonItem" image="HamburgerIcon" id="FTH-1t-MfF">
                             <color key="tintColor" red="0.95294117649999999" green="0.6705882353" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="didTapMenuClicked:" destination="9pv-A4-QxB" id="lUA-Kq-A3d"/>
+                                <action selector="didTapMenuClicked:" destination="9pv-A4-QxB" id="Zng-4v-zaB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -439,9 +439,6 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-7h-uaG">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="667"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="xdd-bU-4z7"/>
-                                        </constraints>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="ozT-Qd-25k">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -459,7 +456,7 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SIY-eI-0Cm" customClass="SelectionCell" customModule="SideMenuExample" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SIY-eI-0Cm" customClass="SelectionCell" customModule="DemoCB" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="72" width="240" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SIY-eI-0Cm" id="RLF-hF-wua">
@@ -489,6 +486,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="kJ4-7h-uaG" firstAttribute="top" secondItem="Evd-7c-szw" secondAttribute="top" id="4uJ-7c-14P"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJ4-7h-uaG" secondAttribute="trailing" id="B7Z-0O-WTP"/>
                                     <constraint firstAttribute="bottom" secondItem="kJ4-7h-uaG" secondAttribute="bottom" id="Fom-HS-pdo"/>
                                     <constraint firstItem="kJ4-7h-uaG" firstAttribute="leading" secondItem="Evd-7c-szw" secondAttribute="leading" id="FqM-AA-r3t"/>
                                     <constraint firstAttribute="width" constant="240" id="yVe-yQ-6v5"/>
@@ -535,7 +533,6 @@
         <!--Second-->
         <scene sceneID="NmI-fm-buu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6CZ-mL-rnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="SecondChatVC" automaticallyAdjustsScrollViewInsets="NO" id="Scd-um-ul4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
@@ -548,13 +545,13 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Ta5-DI-QEt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CZ-mL-rnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861.60000000000002" y="353.9730134932534"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0hR-03-d64">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ijj-Xa-UlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="ThirdChatVC" automaticallyAdjustsScrollViewInsets="NO" id="7VN-Ea-kRV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zka-QV-EE4">
@@ -566,6 +563,7 @@
                         <segue destination="3RP-5p-Wxf" kind="relationship" relationship="rootViewController" id="jGe-2L-UgK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ijj-Xa-UlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="353.9730134932534"/>
         </scene>
