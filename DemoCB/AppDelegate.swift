@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.setupReachability()
+        
+        MSAppCenter.start("b1a98e12-6e12-48c0-ae2c-dd6721db8445", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+            ])
         
         return true
     }

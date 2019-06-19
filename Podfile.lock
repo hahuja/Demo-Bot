@@ -1,16 +1,27 @@
 PODS:
+  - AppCenter (2.0.1):
+    - AppCenter/Analytics (= 2.0.1)
+    - AppCenter/Crashes (= 2.0.1)
+  - AppCenter/Analytics (2.0.1):
+    - AppCenter/Core
+  - AppCenter/Core (2.0.1)
+  - AppCenter/Crashes (2.0.1):
+    - AppCenter/Core
   - SideMenuSwift (1.0.1)
 
 DEPENDENCIES:
+  - AppCenter
   - SideMenuSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AppCenter
     - SideMenuSwift
 
 SPEC CHECKSUMS:
+  AppCenter: 6a5ff2fd007b53431259fdd74f91eb3d0dfea3d1
   SideMenuSwift: a78d47182aa03b5c07570fe57d3ba22c4561f2ce
 
-PODFILE CHECKSUM: 3448112df251b29047492bd85a68a8c33004204a
+PODFILE CHECKSUM: f363d60212a9381c5cfaf748118d70045d815cc1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.6.2

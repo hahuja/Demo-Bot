@@ -7,6 +7,7 @@ target 'DemoCB' do
 
   # Pods for DemoCB
 	pod 'SideMenuSwift'
+  pod 'AppCenter'
 
   target 'DemoCBTests' do
     inherit! :search_paths
